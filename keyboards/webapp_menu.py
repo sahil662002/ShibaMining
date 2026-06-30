@@ -7,7 +7,7 @@ def webapp_menu():
             InlineKeyboardButton(
                 "🚀 Open Shiba Mining App",
                 web_app=WebAppInfo(
-                    url="https://example.com"
+                    url="https://shibamining.pages.dev"
                 )
             )
         ]
