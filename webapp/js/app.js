@@ -1,4 +1,4 @@
-const API_URL = "https://pdas-surname-delegation-ordering.trycloudflare.com";
+const API_URL = "https://naturally-mrs-returning-src.trycloudflare.com";
 
 const tg = window.Telegram.WebApp;
 
