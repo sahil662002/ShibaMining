@@ -97,6 +97,31 @@ async function startMining() {
 
 }
 
+async function loadBalance() {
+
+    if (!user) return;
+
+    try {
+
+        const response = await fetch(`${API_URL}/balance/${user.id}`);
+
+        const data = await response.json();
+
+        balance = data.balance;
+
+        document.getElementById("balance").innerText =
+            balance + " SHIB";
+
+    } catch (e) {
+
+        document.getElementById("balance").innerText =
+            "0 SHIB";
+
+        console.log(e);
+
+    }
+
+}
 
 window.onload = async () => {
 
