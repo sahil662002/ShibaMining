@@ -1,4 +1,4 @@
-const API_URL = "https://naturally-mrs-returning-src.trycloudflare.com";
+const API_URL = "https://patio-regularly-retirement-quest.trycloudflare.com";
 
 const tg = window.Telegram.WebApp;
 
