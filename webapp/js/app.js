@@ -60,6 +60,18 @@ function loadDashboard() {
             0 SHIB
         </p>
 
+    <div class="bottom-nav">
+
+    <button id="homeBtn">🏠<br>Home</button>
+
+    <button id="refBtn">👥<br>Referral</button>
+
+    <button id="walletBtn">💰<br>Wallet</button>
+
+    <button id="profileBtn">👤<br>Profile</button>
+
+</div>
+
     </div>
 
     `;
