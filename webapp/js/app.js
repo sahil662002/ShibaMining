@@ -28,52 +28,41 @@ function loadDashboard() {
 
         </header>
 
-        <div class="profile-card">
-
-            <div class="avatar">👤</div>
+        <div class="mining-circle">
 
             <div>
 
-                <h2 id="username">Loading...</h2>
+                <div style="font-size:42px;">⛏</div>
 
-                <p>Telegram User</p>
+                <div id="timer"
+                     style="margin-top:12px;font-size:20px;font-weight:bold;">
+                    03:00:00
+                </div>
 
             </div>
 
         </div>
 
-        <div class="wallet-card">
+        <p id="mining-status">
+            Ready to Mine
+        </p>
 
-            <p>💰 Wallet Balance</p>
+        <button id="startMining">
+            🚀 START MINING
+        </button>
 
-            <h1 id="balance">Loading...</h1>
-
-        </div>
-
-        <div class="mining-card">
-
-            <h2>⛏ Mining</h2>
-
-            <p id="mining-status">
-                Checking...
-            </p>
-
-            <button id="startMining">
-                🚀 START MINING
-            </button>
-
-        </div>
+        <p id="balance"
+           style="text-align:center;
+                  margin-top:20px;
+                  font-size:22px;
+                  color:#ffb300;
+                  font-weight:bold;">
+            0 SHIB
+        </p>
 
     </div>
 
     `;
-
-    if (user) {
-
-        document.getElementById("username").innerText =
-            user.first_name + (user.last_name ? " " + user.last_name : "");
-
-    }
 
 }
 

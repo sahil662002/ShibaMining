@@ -7,8 +7,9 @@
 
 body{
     background:#0b0f19;
-    color:#fff;
+    color:#ffffff;
     min-height:100vh;
+    overflow-x:hidden;
 }
 
 .dashboard{
@@ -22,71 +23,77 @@ body{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
 .logo{
     font-size:24px;
     font-weight:bold;
-    color:#ff8c00;
+    color:#ff9800;
 }
 
 .verify{
-    background:#16361f;
+    background:#14351d;
     color:#4ade80;
-    padding:8px 12px;
+    padding:8px 14px;
     border-radius:12px;
     font-size:14px;
 }
 
-.profile-card,
-.wallet-card,
-.mining-card,
-.bonus-card{
-    background:#151c2e;
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:20px;
-    padding:20px;
-    margin-bottom:18px;
-}
-
-.profile-card{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.avatar{
-    width:60px;
-    height:60px;
+.mining-circle{
+    width:220px;
+    height:220px;
+    margin:35px auto;
     border-radius:50%;
-    background:#ff8c00;
+    border:8px solid #ff9800;
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     font-size:28px;
+    font-weight:bold;
+    color:#ff9800;
+    box-shadow:
+        0 0 20px #ff9800,
+        0 0 40px #ff9800;
+    animation:rotateCircle 10s linear infinite;
 }
 
-.wallet-card h1{
-    margin-top:10px;
-    color:#ffb000;
-}
+@keyframes rotateCircle{
 
-.mining-card h2,
-.bonus-card h2{
-    margin-bottom:10px;
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
 }
 
 #startMining{
     width:100%;
-    margin-top:18px;
     padding:16px;
+    margin-top:25px;
     border:none;
-    border-radius:14px;
-    background:#ff7a00;
-    color:white;
-    font-size:18px;
+    border-radius:18px;
+    background:linear-gradient(90deg,#ff9800,#ff6a00);
+    color:#fff;
+    font-size:20px;
     font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#startMining:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 20px #ff9800;
+}
+
+#mining-status{
+    text-align:center;
+    margin-top:15px;
+    font-size:18px;
+    color:#ffd54f;
 }
 
 .bottom-nav{
@@ -98,14 +105,21 @@ body{
     margin:auto;
     display:flex;
     justify-content:space-around;
-    background:#111827;
-    padding:12px;
+    align-items:center;
+    background:#151c2e;
     border-top:1px solid rgba(255,255,255,.08);
+    padding:14px 0;
 }
 
 .bottom-nav button{
     background:none;
     border:none;
-    color:white;
+    color:#ffffff;
     font-size:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.bottom-nav button:hover{
+    color:#ff9800;
 }
