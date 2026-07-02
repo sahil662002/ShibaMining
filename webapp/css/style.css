@@ -41,31 +41,48 @@ body{
 }
 
 .mining-circle{
-    width:220px;
-    height:220px;
-    margin:35px auto;
+    width:200px;
+    height:200px;
+    margin:30px auto;
+
     border-radius:50%;
-    border:8px solid #ff9800;
+    border:6px solid #ff9800;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:28px;
-    font-weight:bold;
-    color:#ff9800;
+
+    background:#0b0f19;
+
     box-shadow:
-        0 0 20px #ff9800,
-        0 0 40px #ff9800;
-    animation:rotateCircle 10s linear infinite;
+        0 0 15px #ff9800,
+        0 0 35px rgba(255,152,0,.7),
+        inset 0 0 20px rgba(255,152,0,.15);
+
+    animation:glowCircle 2s ease-in-out infinite;
 }
 
-@keyframes rotateCircle{
+@keyframes glowCircle{
 
-    from{
-        transform:rotate(0deg);
+    0%{
+        box-shadow:
+        0 0 15px #ff9800,
+        0 0 35px rgba(255,152,0,.7),
+        inset 0 0 20px rgba(255,152,0,.15);
     }
 
-    to{
-        transform:rotate(360deg);
+    50%{
+        box-shadow:
+        0 0 25px #ffb300,
+        0 0 55px rgba(255,179,0,.9),
+        inset 0 0 30px rgba(255,179,0,.25);
+    }
+
+    100%{
+        box-shadow:
+        0 0 15px #ff9800,
+        0 0 35px rgba(255,152,0,.7),
+        inset 0 0 20px rgba(255,152,0,.15);
     }
 
 }
@@ -153,5 +170,26 @@ body{
     color:#ff9800;
 
     transform:translateY(-2px);
+
+}
+
+#pickaxe{
+    display:inline-block;
+}
+
+/* Mining Start hone par ye class add hogi */
+.pickaxe-rotate{
+    animation:pickaxeRotate 2s linear infinite;
+}
+
+@keyframes pickaxeRotate{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
 
 }

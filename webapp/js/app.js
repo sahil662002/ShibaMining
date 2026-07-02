@@ -116,6 +116,10 @@ async function startMining() {
 
     const data = await response.json();
 
+    document
+        .getElementById("pickaxe")
+        .classList.add("pickaxe-rotate");
+
     alert(data.message);
 
 }
