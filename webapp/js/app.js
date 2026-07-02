@@ -82,6 +82,33 @@ function loadDashboard() {
             🚀 START MINING
         </button>
 
+    <div class="boost-card">
+
+    <div class="boost-title">
+        ⚡ BOOST MINING REWARD ⚡
+    </div>
+
+    <div class="boost-info">
+
+        <div class="boost-box">
+            <div class="boost-label">CURRENT SPEED</div>
+            <div class="boost-value" id="speedValue">1.0x</div>
+            <div class="boost-green">+0% REWARD</div>
+        </div>
+
+        <div class="boost-box">
+            <div class="boost-label">TOTAL REWARD</div>
+            <div class="boost-value" id="rewardValue">100 SHIB</div>
+            <div class="boost-small">(3 Hours)</div>
+        </div>
+
+    </div>
+
+    <button id="watchAd">
+        📺 WATCH AD TO UPGRADE
+    </button>
+
+</div>
         <div class="bottom-nav">
 
             <button id="homeBtn">🏠<br>Home</button>
