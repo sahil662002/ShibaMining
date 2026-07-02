@@ -28,22 +28,53 @@ function loadDashboard() {
 
         </header>
 
+        <div class="timer-card"
+             style="text-align:center;
+                    background:#151c2e;
+                    padding:14px;
+                    border-radius:16px;
+                    margin-bottom:20px;">
+
+            <div style="font-size:14px;color:#9ca3af;">
+                MINING TIME LEFT
+            </div>
+
+            <div id="timer"
+                 style="font-size:28px;
+                        font-weight:bold;
+                        color:#ffffff;
+                        margin-top:6px;">
+                03:00:00
+            </div>
+
+        </div>
+
         <div class="mining-circle">
 
-            <div>
+            <div style="text-align:center;">
 
-                <div style="font-size:42px;">⛏</div>
+                <div id="pickaxe"
+                     style="font-size:50px;">
+                    ⛏
+                </div>
 
-                <div id="timer"
-                     style="margin-top:12px;font-size:20px;font-weight:bold;">
-                    03:00:00
+                <div id="liveCoin"
+                     style="margin-top:14px;
+                            font-size:24px;
+                            font-weight:bold;
+                            color:#ffb300;">
+                    0.00 SHIB
                 </div>
 
             </div>
 
         </div>
 
-        <p id="mining-status">
+        <p id="mining-status"
+           style="text-align:center;
+                  margin-top:18px;
+                  font-size:18px;
+                  color:#ffd54f;">
             Ready to Mine
         </p>
 
@@ -51,26 +82,17 @@ function loadDashboard() {
             🚀 START MINING
         </button>
 
-        <p id="balance"
-           style="text-align:center;
-                  margin-top:20px;
-                  font-size:22px;
-                  color:#ffb300;
-                  font-weight:bold;">
-            0 SHIB
-        </p>
+        <div class="bottom-nav">
 
-    <div class="bottom-nav">
+            <button id="homeBtn">🏠<br>Home</button>
 
-    <button id="homeBtn">🏠<br>Home</button>
+            <button id="refBtn">👥<br>Referral</button>
 
-    <button id="refBtn">👥<br>Referral</button>
+            <button id="walletBtn">💰<br>Wallet</button>
 
-    <button id="walletBtn">💰<br>Wallet</button>
+            <button id="profileBtn">👤<br>Profile</button>
 
-    <button id="profileBtn">👤<br>Profile</button>
-
-</div>
+        </div>
 
     </div>
 
@@ -110,13 +132,19 @@ async function loadBalance() {
 
         balance = data.balance;
 
-        document.getElementById("balance").innerText =
-            balance + " SHIB";
+        const balanceElement = document.getElementById("balance");
+
+        if (balanceElement) {
+            balanceElement.innerText = balance + " SHIB";
+        }
 
     } catch (e) {
 
-        document.getElementById("balance").innerText =
-            "0 SHIB";
+        const balanceElement = document.getElementById("balance");
+
+        if (balanceElement) {
+            balanceElement.innerText = "0 SHIB";
+        }
 
         console.log(e);
 
@@ -135,4 +163,3 @@ window.onload = async () => {
         .addEventListener("click", startMining);
 
 };
-
